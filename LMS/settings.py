@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1d!qq4x9!rhm&4a7y#a*ok^v3v2tu&c^qjx)wb!tpnwrg+%%fp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [nipracademy.in,localhost]
 
 
 # Application definition
