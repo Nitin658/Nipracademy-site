@@ -147,7 +147,8 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media' )
-
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10737418240  # 10 GB (adjust as necessary)
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10737418240  # 10 GB (adjust as necessary)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
