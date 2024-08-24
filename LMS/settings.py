@@ -151,6 +151,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR / 'media' )
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10737418240  # 10 GB (adjust as necessary)
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10737418240  # 10 GB (adjust as necessary)
 
+from datetime import timedelta
+SESSION_COOKIE_AGE = timedelta(hours=1).total_seconds()  # Extend as needed
+
 #HTTPS settings (make true to all of them after ssl certification complited)
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
