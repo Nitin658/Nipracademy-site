@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1d!qq4x9!rhm&4a7y#a*ok^v3v2tu&c^qjx)wb!tpnwrg+%%fp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.nipracademy.in','nipracademy.in','localhost','3.110.193.198','172.31.46.218']
 
