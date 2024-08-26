@@ -139,14 +139,28 @@ USE_TZ = True
 import os
 
 #STATIC_ROOT = os.path.join(BASE_DIR / 'static')
+# static url (STATIC_URL = f'{AWS_S3_URL_PROTOCOL}://{AWS_S3_CUSTOM_DOMAIN}/static/')
+#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR / 'static')
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+#s3 bucket installation
+AWS_ACCESS_KEY_ID = 'AKIAQIJRRVLIZGG7XPTU'
+AWS_SECRET_ACCESS_KEY ='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'
+AWS_STORAGE_BUCKET_NAME ='nipracademy'
+AWS_S3_REGION_NAME = 'ap-south-1'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com',
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_S3_URL_PROTOCOL = 'https'
+AWS_S3_USE_SSL = True
+AWS_S3_VERITY = True
 
-MEDIA_URL = '/media/'
+MEDIA_URL = f'{AWS_S3_URL_PROTOCOL}://{AWS_S3_CUSTOM_DOMAIN}/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media' )
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10737418240  # 10 GB (adjust as necessary)
