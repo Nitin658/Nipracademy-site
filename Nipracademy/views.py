@@ -225,7 +225,7 @@ def details(request):
     return render(request,'Nipracademy/details.html')  
 
 # Comment page View function
-@login_required
+@login_required(login_url='/login')
 def comment_page(request):
     if request.method == 'POST':
         form = CommentForm(request.POST)
