@@ -162,7 +162,7 @@ AWS_S3_USE_SSL = True
 AWS_S3_VERITY = True
 
 MEDIA_URL = 'https://nipracademy.s3.ap-south-1.amazonaws.com/media/'
-#MEDIA_ROOT = os.path.join(BASE_DIR / 'media' )
+MEDIA_ROOT = os.path.join(BASE_DIR / 'media' )
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10737418240  # 10 GB (adjust as necessary)
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10737418240  # 10 GB (adjust as necessary)
