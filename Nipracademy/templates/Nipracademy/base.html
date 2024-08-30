@@ -33,6 +33,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
+            
+          {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link-active" area-current="page">
+                <img src="{% static 'image\icons8-username-48.png' %}" alt="User">
+                {{ user.username }}
+              </a>&nbsp;
+            </li>
+            {%endif%}
+            
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
