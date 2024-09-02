@@ -186,8 +186,12 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-KEY_ID  = "rzp_test_Y4LiMug31GdPlZ"
-KEY_SECRET  = "PR0KxKIhZ8wxzxGW6GMNyRdf"
+with open(os.path.join(BASE_DIR, 'trans1.txt')) as f:
+    KEY_ID = f.read().strip()
+    
+with open(os.path.join(BASE_DIR, 'trans2.txt')) as f:
+    KEY_SECRET = f.read().strip()
+
 SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin-allow-popups"
 
 LOGIN_URL = '/login/'
