@@ -195,10 +195,10 @@ with open(os.path.join(BASE_DIR, 'trans2.txt')) as f:
 SECURE_CROSS_ORIGIN_OPENER_POLICY = "same-origin-allow-popups"
 
 LOGIN_URL = '/login/'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "singhvivek49966@gmail.com"
-EMAIL_HOST_PASSWORD = "Vivek@85410"
+EMAIL_HOST_PASSWORD = "eozk srpb kkek lydr"
 
